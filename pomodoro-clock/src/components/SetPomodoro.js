@@ -9,7 +9,35 @@ const SetPomodoro = () => {
     active: "work",
   });
 
-  const handleSubmit = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "work":
+        setNewTimer({
+          ...newTimer,
+          work: parseInt(value),
+        });
+        break;
+      case "shortBreak":
+        setNewTimer({
+          ...newTimer,
+          short: parseInt(value),
+        });
+        break;
+      case "longBreak":
+        setNewTimer({
+          ...newTimer,
+          long: parseInt(value),
+        });
+        break;
+      default:
+        break;
+    }
+    console.log("newTimer");
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="form-container">
