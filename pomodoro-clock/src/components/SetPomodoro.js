@@ -32,6 +32,8 @@ const SetPomodoro = () => {
           long: parseInt(value),
         });
         break;
+      default:
+        break;
     }
   };
   const handleSubmit = (e) => {
