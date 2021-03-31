@@ -2,7 +2,8 @@
 
 :root {
   --bg-dark: #1b1b1b;
-  --bg-color: #474747;
+  --bg-color: #037a90;
+  --inset-shadow: inset -6px -6px 9px #474747, inset 6px 6px 9px 0 #1b1b1b;
 }
 
 body {
@@ -24,12 +25,17 @@ code {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(45deg, var(--bg-dark), var(--bg-color));
+  /* background: linear-gradient(45deg, var(--bg-dark), var(--bg-color)); */
+  background-color: var(--bg-color);
 }
 
 .container h1 {
-  font-size: 2.6rem;
+  font-weight: bold;
+  font-size: 5rem;
   margin-bottom: 2rem;
+  color: var(--bg-color);
+  text-shadow: 1px 1px 1px rgba(187, 187, 187, 0.4),
+    -1px -1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .container .labels {
@@ -39,16 +45,6 @@ code {
   padding: 0.3rem 0.3rem;
   background-color: black;
 }
-
-/* button {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.22),
-    rgba(255, 255, 255, 0.25)
-  );
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25),
-    -4px -4px 8px 0 rgba(255, 255, 255, 0.3);
-} */
 
 .active-label {
   background-color: #fe6f6b;
