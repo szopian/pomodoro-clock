@@ -51,6 +51,7 @@ const SetPomodoro = () => {
             onChange={handleChange}
             value={newTimer.work}
           />
+
           <input
             className="input"
             type="number"
@@ -58,6 +59,7 @@ const SetPomodoro = () => {
             onChange={handleChange}
             value={newTimer.short}
           />
+
           <input
             className="input"
             type="number"
@@ -65,6 +67,7 @@ const SetPomodoro = () => {
             onChange={handleChange}
             value={newTimer.long}
           />
+
           <button className="input" type="submit">
             Set Timer
           </button>
