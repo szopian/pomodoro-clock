@@ -113,8 +113,8 @@ button {
   height: 30px;
   width: 30px;
   padding: 2rem;
-  color: #c9ccea;
-  border: 1px;
+  color: var(--bg-color);
+  border: 5px;
   border-radius: 50%;
   margin-right: 0.3rem;
   text-align: center;
