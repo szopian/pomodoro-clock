@@ -114,18 +114,22 @@ button {
   width: 30px;
   padding: 2rem;
   color: #c9ccea;
-  border: 2px;
+  border: 1px;
   border-radius: 50%;
   margin-right: 0.3rem;
   text-align: center;
   font-size: 14pt;
 
   background-color: var(--bg-color);
-  box-shadow: inset 4px 4px 8px 0 rgba(255, 255, 255, 0.3),
-    inset 4px 4px 8px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 2px 16px rgba(255, 255, 255, 0.3),
+    -4px -2px 16px 0 rgba(0, 0, 0, 0.25);
 
   outline: none;
   cursor: initial;
+}
+
+input {
+  text-shadow: 2px 2px 2px #d6e1ef99, 0 0 0 #000, 2px 2px 2px #d6e1ef00;
 }
 
 input::-webkit-outer-spin-button,
