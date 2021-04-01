@@ -29,7 +29,7 @@ const App = () => {
           <ul className="labels">
             <li>
               <Button
-                title="Work"
+                title="work"
                 activeClass={
                   executing.active === "work" ? "active-label" : undefined
                 }
@@ -38,7 +38,7 @@ const App = () => {
             </li>
             <li>
               <Button
-                title="Short Break"
+                title="short break"
                 activeClass={
                   executing.active === "short" ? "active-label" : undefined
                 }
@@ -47,7 +47,7 @@ const App = () => {
             </li>
             <li>
               <Button
-                title="Long Break"
+                title="long break"
                 activeClass={
                   executing.active === "long" ? "active-label" : undefined
                 }
@@ -55,7 +55,7 @@ const App = () => {
               />
             </li>
             <li>
-              <Button title="Settings" _callback={SettingsBtn} />
+              <Button title="settings" _callback={SettingsBtn} />
             </li>
           </ul>
           <div className="timer-container">
@@ -71,12 +71,12 @@ const App = () => {
           </div>
           <div className="button-wrapper">
             <Button
-              title="Start"
+              title="start"
               activeClass={!startAnimate ? "active" : undefined}
               _callback={startTimer}
             />
             <Button
-              title="Pause"
+              title="pause"
               activeClass={startAnimate ? "active" : undefined}
               _callback={pauseTimer}
             />

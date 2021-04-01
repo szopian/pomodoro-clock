@@ -2,8 +2,11 @@
 
 :root {
   --bg-dark: #1b1b1b;
-  --bg-color: #037a90;
-  --inset-shadow: inset -6px -6px 9px #474747, inset 6px 6px 9px 0 #1b1b1b;
+  --bg-color: #04a7c4;
+  --shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
+    -2px -2px 2px rgba(0, 0, 0, 0.2);
+  --inset-sh: inset 2px 2px 2px rgba(187, 187, 187, 0.4),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -19,7 +22,6 @@ code {
 }
 
 .container {
-  color: #c9ccea;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,8 +35,7 @@ code {
   font-size: 5rem;
   margin-bottom: 2rem;
   color: var(--bg-color);
-  text-shadow: 1px 1px 1px rgba(187, 187, 187, 0.4),
-    -1px -1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--shadow);
 }
 
 .container .labels {
@@ -42,11 +43,14 @@ code {
   display: flex;
   font-size: 0.8rem;
   padding: 0.3rem 0.3rem;
-  background-color: black;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
 }
 
 .active-label {
-  background-color: #fe6f6b;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
 }
 
 .timer-container {
@@ -64,9 +68,9 @@ code {
   width: 15rem;
   border-radius: 7.5rem;
   color: #efefef;
-  background: #151932;
+  background: var(--bg-color);
   font-size: 3.5rem;
-  box-shadow: 1rem 1.5rem 2rem black;
+  box-shadow: var(--shadow);
 }
 
 .button-wrapper {
@@ -77,29 +81,32 @@ code {
 }
 
 button {
-  color: #efefef;
+  color: var(--bg-dark);
   font-size: 0.8rem;
+  font-weight: bolder;
   padding: 0.5rem 1.2rem;
   border: none;
-  border-radius: 3rem;
+  border-radius: 10px;
   margin: 0.2rem;
-  background: #0c0e1b;
+  background: var(--bg-color);
   min-width: 80px;
   cursor: pointer;
   outline: none;
+  box-shadow: var(--inset-sh);
+  font-family: "Comfortaa", cursive;
 }
 
-.button-wrapper button.activve {
-  color: #0c0e1b;
-  background-color: #c9ccea;
-  border: 1px solid #0c0e1b;
+button:hover {
+  box-shadow: inset 1px 1px 1px rgba(187, 187, 187, 0.2),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.1);
 }
+
 .form-container {
   text-align: center;
   background-color: var(--bg-color);
   border-radius: 20px;
-  box-shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
-    -2px -2px 2px rgba(0, 0, 0, 0.2);
+
+  box-shadow: var(--inset-sh);
 }
 .input-wrapper {
   margin: 1.5rem;
@@ -108,23 +115,18 @@ button {
   height: 30px;
   width: 30px;
   padding: 2rem;
-  color: var(--bg-color);
+  color: var(--bg-dark);
   border: 5px;
-  border-radius: 50%;
-  margin-right: 0.3rem;
+  border-radius: 20px;
+  margin-right: 0.8rem;
   text-align: center;
   font-size: 14pt;
 
-  background-color: var(--bg-color);
-  box-shadow: 4px 2px 16px rgba(255, 255, 255, 0.3),
-    -4px -2px 16px 0 rgba(0, 0, 0, 0.25);
-
+  background: linear-gradient(45deg, #04a7c4, var(--bg-color));
+  box-shadow: var(--shadow);
+  text-shadow: var(--shadow);
   outline: none;
   cursor: initial;
-}
-
-input {
-  text-shadow: 2px 2px 2px #d6e1ef99, 0 0 0 #000, 2px 2px 2px #d6e1ef00;
 }
 
 input::-webkit-outer-spin-button,
