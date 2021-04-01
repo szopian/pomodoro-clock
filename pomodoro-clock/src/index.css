@@ -3,7 +3,8 @@
 :root {
   --bg-dark: #1b1b1b;
   --bg-color: #04a7c4;
-  --inset-shadow: inset -6px -6px 9px #474747, inset 6px 6px 9px 0 #1b1b1b;
+  --shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
+    -2px -2px 2px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -32,8 +33,7 @@ code {
   font-size: 5rem;
   margin-bottom: 2rem;
   color: var(--bg-color);
-  text-shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
-    -2px -2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--shadow);
 }
 
 .container .labels {
@@ -41,7 +41,9 @@ code {
   display: flex;
   font-size: 0.8rem;
   padding: 0.3rem 0.3rem;
-  background-color: black;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
 }
 
 .active-label {
@@ -63,9 +65,9 @@ code {
   width: 15rem;
   border-radius: 7.5rem;
   color: #efefef;
-  background: #151932;
+  background: var(--bg-color);
   font-size: 3.5rem;
-  box-shadow: 1rem 1.5rem 2rem black;
+  box-shadow: var(--shadow);
 }
 
 .button-wrapper {
@@ -116,12 +118,8 @@ button {
   font-size: 14pt;
 
   background: linear-gradient(45deg, #04a7c4, var(--bg-color));
-
-  box-shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
-    -2px -2px 2px rgba(0, 0, 0, 0.2);
-
-  text-shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
-    -2px -2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
+  text-shadow: var(--shadow);
   outline: none;
   cursor: initial;
 }
