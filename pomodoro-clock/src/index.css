@@ -5,6 +5,8 @@
   --bg-color: #04a7c4;
   --shadow: 2px 2px 2px rgba(187, 187, 187, 0.4),
     -2px -2px 2px rgba(0, 0, 0, 0.2);
+  --inset-sh: inset 2px 2px 2px rgba(187, 187, 187, 0.4),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -47,7 +49,8 @@ code {
 }
 
 .active-label {
-  background-color: #fe6f6b;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
 }
 
 .timer-container {
@@ -78,30 +81,32 @@ code {
 }
 
 button {
-  color: #efefef;
+  color: var(--bg-dark);
   font-size: 0.8rem;
+  font-weight: bolder;
   padding: 0.5rem 1.2rem;
   border: none;
-  border-radius: 3rem;
+  border-radius: 10px;
   margin: 0.2rem;
-  background: #0c0e1b;
+  background: var(--bg-color);
   min-width: 80px;
   cursor: pointer;
   outline: none;
+  box-shadow: var(--inset-sh);
+  font-family: "Comfortaa", cursive;
 }
 
-.button-wrapper button.activve {
-  color: #0c0e1b;
-  background-color: #c9ccea;
-  border: 1px solid #0c0e1b;
+button:hover {
+  box-shadow: inset 1px 1px 1px rgba(187, 187, 187, 0.2),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.1);
 }
+
 .form-container {
   text-align: center;
   background-color: var(--bg-color);
   border-radius: 20px;
 
-  box-shadow: inset 2px 2px 2px rgba(187, 187, 187, 0.4),
-    inset -2px -2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--inset-sh);
 }
 .input-wrapper {
   margin: 1.5rem;

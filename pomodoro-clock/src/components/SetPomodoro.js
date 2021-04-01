@@ -69,7 +69,7 @@ const SetPomodoro = () => {
           />
 
           <button id="set-button" type="submit">
-            Set Timer
+            set timer
           </button>
         </div>
       </form>
