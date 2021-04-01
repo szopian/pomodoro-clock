@@ -68,7 +68,7 @@ const SetPomodoro = () => {
             value={newTimer.long}
           />
 
-          <button className="input" type="submit">
+          <button id="set-button" type="submit">
             Set Timer
           </button>
         </div>
